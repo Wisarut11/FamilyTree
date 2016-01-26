@@ -1,0 +1,21 @@
+﻿body {
+    background-image: url('../img/startpagepic.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center bottom;
+    background-size: 400px 300px;
+}
+#Header{
+    /*height:200px;
+    width:1250px;
+    background-color:blue;
+    padding:5px;*/
+    width: 1250px;
+    height: 200px;
+    padding: 5px 5px 5px 0;
+    margin: 10px auto 0;
+    background-color:#4fb575;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
