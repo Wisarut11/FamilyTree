@@ -6,11 +6,7 @@
     background-size: 400px 300px;
 }
 #Header{
-    /*height:200px;
-    width:1250px;
-    background-color:blue;
-    padding:5px;*/
-    width: auto;
+    width:auto;
     height: 200px;
     padding: 5px 5px 5px 0;
     margin: 10px auto 0;
