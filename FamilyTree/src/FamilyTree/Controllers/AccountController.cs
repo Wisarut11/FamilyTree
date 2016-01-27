@@ -13,6 +13,7 @@ using FamilyTree.ViewModels;
 namespace FamilyTree.Controllers
 {
     [Authorize]
+    //[Route("Konto")]
     public class AccountController : Controller
     {
             UserManager<IdentityUser> _userManager;
@@ -33,6 +34,7 @@ namespace FamilyTree.Controllers
         {
             return View();
         }
+        //[Route("Skapa")]
         [AllowAnonymous]
         public IActionResult Registration()
         {
@@ -66,7 +68,7 @@ namespace FamilyTree.Controllers
             else
                 return Redirect(returnUrl);
         }
-
+        //[Route("Inne")]
         [AllowAnonymous]
         public IActionResult Login()
         {
