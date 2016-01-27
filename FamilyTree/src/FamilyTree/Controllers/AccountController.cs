@@ -36,6 +36,8 @@ namespace FamilyTree.Controllers
         [AllowAnonymous]
         public IActionResult Registration()
         {
+
+            //throw new Exception();
             return View();
         }
 
@@ -81,7 +83,7 @@ namespace FamilyTree.Controllers
                 false, false);
 
             if (string.IsNullOrWhiteSpace(returnUrl))
-                return RedirectToAction("Create", "Car");
+                return RedirectToAction("index");
             else
                 return Redirect(returnUrl);
         }

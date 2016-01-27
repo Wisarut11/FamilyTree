@@ -8,6 +8,7 @@ using Microsoft.AspNet.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Data.Entity;
+using Microsoft.Extensions.Logging;
 
 namespace FamilyTree
 {
@@ -17,7 +18,7 @@ namespace FamilyTree
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            var connString = @"Data Source=185.7.62.242\SQLEXPRESS;Initial Catalog=FamilyTree;Integrated Security=False;User ID=grupp4;Password=********;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            var connString = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=FamilyTree;Integrated Security=True;Pooling=False";
 
             services.AddEntityFramework()
                 .AddSqlServer()
@@ -34,12 +35,26 @@ namespace FamilyTree
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, 
+            ILoggerFactory loggerFactory)
         {
-            app.UseDeveloperExceptionPage();
-            app.UseStaticFiles();
-            app.UseIdentity();
-            app.UseMvcWithDefaultRoute();
+            
+            loggerFactory.AddConsole(LogLevel.Error);
+            {
+                app.UseIISPlatformHandler();
+
+                app.UseStatusCodePagesWithReExecute("/StatusCodes/StatusCode{0}");
+
+                if (env.IsDevelopment())
+                    app.UseDeveloperExceptionPage();
+                else
+                    app.UseExceptionHandler("/Home/Error");
+
+                app.UseStaticFiles();
+                app.UseIdentity();
+                app.UseMvcWithDefaultRoute();
+
+            }
         }
 
         // Entry point for the application.
