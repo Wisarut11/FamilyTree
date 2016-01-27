@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/css/stylesheet.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div id="Header">
+
+    </div>
+    <h4>
+        <a href="~/account/registration">Registration</a>
+        <a href="~/account/login">Login</a>
+    </h4>
+    <div id="Content">
+
+
+        <div>
+            @RenderBody()
+        </div>
+
+    </div>
+
+    <script src="~/Script/jquery.min.js"></script>
+    <script src="~/Script/jquery.validate.min.js"></script>
+    <script src="~/Script/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>
