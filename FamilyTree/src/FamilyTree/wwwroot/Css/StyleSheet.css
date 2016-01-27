@@ -89,3 +89,79 @@ body {
      display: block;
 }
 
+/*----------------Footer------------------*/
+
+#Footer{
+    background-color: gray;
+    width: auto;
+    height: 300px;
+    margin-top: 210px;
+
+}
+
+#FooterBox1{
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    margin-left: 30%;
+    float: left;
+}
+
+#BoxTextHead1{
+    text-align: center;
+    margin-top: 0px;
+    color: #ffffff;
+    font-size: 1.55em;
+    margin-bottom: 23px;
+    text-transform: uppercase;
+}
+
+#BoxText1{
+    text-align: center;
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 1em;
+    margin-bottom: 23px;
+    text-transform: uppercase;
+}
+
+#Line{
+    width: 1px;
+    height: 200px;
+    background-color: white;
+    float: left;
+    margin-top: 0px;
+}
+
+#FooterBox2{
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    margin-left: 46%;
+}
+
+#BoxTextHead2{
+    text-align: center;
+    margin-top: 0px;
+    color: #ffffff;
+    font-size: 1.55em;
+    margin-bottom: 23px;
+    text-transform: uppercase;
+}
+
+#BoxText2{
+    text-align: center;
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 1em;
+    margin-bottom: 23px;
+    text-transform: uppercase;
+}
+
+/*----------------Footer------------------*/
+
+#Content{
+    background-color: transparent;
+    width: auto;
+    height: 400px;
+}
