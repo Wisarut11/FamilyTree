@@ -13,7 +13,7 @@ using FamilyTree.ViewModels;
 namespace FamilyTree.Controllers
 {
     [Authorize]
-    //[Route("Konto")]
+    [Route("Konto")]
     public class AccountController : Controller
     {
             UserManager<IdentityUser> _userManager;
@@ -34,7 +34,7 @@ namespace FamilyTree.Controllers
         {
             return View();
         }
-        //[Route("Skapa")]
+        [Route("Skapa")]
         [AllowAnonymous]
         public IActionResult Registration()
         {

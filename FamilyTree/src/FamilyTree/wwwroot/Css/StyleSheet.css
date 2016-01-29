@@ -1,8 +1,15 @@
-﻿#Header_Intro{
+﻿
+a{
+    text-decoration: none;
+}
+#Header_Intro{
     text-align:center;
 }
-a{
-        text-decoration: none;
+#Slogan{
+    font-size:11px;
+    margin-top:-20px;
+    margin-left:-15px;
+    color:aqua;
 }
 #Logo_1{
 
@@ -17,18 +24,19 @@ a{
     margin-top: -5px;
     color:aqua;
 
+
 }
 #Logotext_1{
 
-    margin-left:670px;
-    margin-top:-45px;
+    margin-left:50%;
+    margin-top:-4.1%;
     float:left;
     color:blueviolet;
     font-family: cursive
     
 }
 #Logotext_2{
-    margin-top: -20px;
+    margin-top: -2%;
     color:aqua;
 }
 
@@ -44,7 +52,7 @@ body {
     height: 200px;
     padding: 5px 5px 5px 0;
     margin: 10px auto 0;
-    background-color:#4fb575;
+    background-color:#23a6a6;
     border-radius: 10px 10px 0 0;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
@@ -54,7 +62,7 @@ body {
     text-align: center;
 }
 #dropdown li {
-     background-color:#4fb575;
+     background-color:#23a6a6;
      border:1px solid #666;
      list-style: none;
      margin-left:-42px;
@@ -66,6 +74,7 @@ body {
 }
 #dropdown li:hover {
     background-color:greenyellow;
+    color:#23a6a6;
 }
 #dropdown li a {
     text-decoration:none;
