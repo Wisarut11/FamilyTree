@@ -9,7 +9,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Data.Entity;
 using Microsoft.Extensions.Logging;
-using FamilyTree.Models;
 
 namespace FamilyTree
 {
@@ -19,16 +18,16 @@ namespace FamilyTree
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            var connString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Database=FamilyTree;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True";
+            var connString = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=FamilyTree;Integrated Security=True;Pooling=False";
 
             services.AddEntityFramework()
                 .AddSqlServer()
-                .AddDbContext<ftContext>(options =>
+                .AddDbContext<IdentityDbContext>(options =>
                 options.UseSqlServer(connString));
 
 
-            services.AddIdentity<User, IdentityRole>()
-                .AddEntityFrameworkStores<ftContext>()
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<IdentityDbContext>()
                 .AddDefaultTokenProviders();
 
 
@@ -41,6 +40,7 @@ namespace FamilyTree
         {
             
             loggerFactory.AddConsole(LogLevel.Error);
+            {
                 app.UseIISPlatformHandler();
 
                 app.UseStatusCodePagesWithReExecute("/StatusCodes/StatusCode{0}");
@@ -52,7 +52,9 @@ namespace FamilyTree
 
                 app.UseStaticFiles();
                 app.UseIdentity();
-            app.UseMvcWithDefaultRoute();
+                app.UseMvcWithDefaultRoute();
+
+            }
         }
 
         // Entry point for the application.
