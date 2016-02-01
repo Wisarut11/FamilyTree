@@ -28,6 +28,12 @@ a{
 #LoginTable{
     padding:30px;
 }
+
+#LoginIndex{
+    width:300px;
+    float:right;
+}
+
 #RegistrationForm{
     height:200px;
     width:300px;
@@ -70,8 +76,10 @@ a{
     
 }
 #Logotext_2{
-    margin-top: -20px;
+    margin-top: -40px;
     color:aqua;
+    float:left;
+
 }
 
 #Header{
@@ -96,8 +104,8 @@ a{
     }
 
 #dropdown {
-    float: left;
     text-align: center;
+    margin-top:150px;
 }
 #dropdown li {
      background-color:#21b9ca;

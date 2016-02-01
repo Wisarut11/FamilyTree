@@ -1,18 +1,17 @@
 ﻿@model RegistrationViewModel
-
-<h1>Welcome to Registration</h1>
-
-<form asp-action="Registration">
-    <label asp-for="UserName"></label>
-    <br />
-    <input asp-for="UserName" />
-    <span asp-validation-for="UserName"></span>
-    <br />
-    <label asp-for="Password"></label>
-    <br />
-    <input asp-for="Password" />
-    <span asp-validation-for="Password"></span>
-    <br />
-    <input type="submit" value="Registrera" />
-
-</form>
+<div id="Header">
+    <h1>Welcome to Registration</h1>
+    <form asp-action="Registration">
+        <label asp-for="UserName"></label>
+        <br />
+        <input asp-for="UserName" />
+        <span asp-validation-for="UserName"></span>
+        <br />
+        <label asp-for="Password"></label>
+        <br />
+        <input asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+        <br />
+        <input type="submit" value="Registrera" />
+    </form>
+    </div>
