@@ -13,7 +13,6 @@ namespace FamilyTree.Models
         {
             FamilyMembers = new List<FamilyMember>();
         }
-        public int Age { get; set; }
         public List<FamilyMember> FamilyMembers { get; set; }
     }
 }
