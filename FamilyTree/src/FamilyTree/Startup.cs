@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Data.Entity;
 using Microsoft.Extensions.Logging;
+using FamilyTree.Models;
 
 namespace FamilyTree
 {
@@ -18,16 +19,21 @@ namespace FamilyTree
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            var connString = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=FamilyTree;Integrated Security=True;Pooling=False";
+            var connString = @"Data Source =(localdb)\MSSQLLocalDB;Database=FamilyTree;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=true";
+
 
             services.AddEntityFramework()
                 .AddSqlServer()
-                .AddDbContext<IdentityDbContext>(options =>
-                options.UseSqlServer(connString));
+                .AddDbContext<ftContext>(options =>
+                {
+                    options.UseSqlServer(connString);
+                    
+                }
+                );
 
 
-            services.AddIdentity<IdentityUser, IdentityRole>()
-                .AddEntityFrameworkStores<IdentityDbContext>()
+            services.AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<ftContext>()
                 .AddDefaultTokenProviders();
 
 
