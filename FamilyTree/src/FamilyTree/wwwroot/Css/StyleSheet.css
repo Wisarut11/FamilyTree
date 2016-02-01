@@ -1,8 +1,50 @@
-﻿#Header_Intro{
+﻿body {
+    /*background-image: url('../img/startpagepic.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center bottom;
+    background-size: 400px 300px;*/
+    background-color:black;
+}
+#Header_Intro{
     text-align:center;
 }
 a{
-        text-decoration: none;
+    text-decoration: none;
+}
+
+#RegistrationLink{
+    height:50px;
+    width:300px;
+    margin-top:20px;
+    background-color:#21b9ca;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#RagistrationTable{
+    padding:30px;
+}
+#LoginTable{
+    padding:30px;
+}
+#RegistrationForm{
+    height:200px;
+    width:300px;
+    background-color:#21b9ca;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#LoginForm{
+    height:200px;
+    width:300px;
+    background-color:#21b9ca;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.field-validation-error{
+    color:red;
 }
 #Logo_1{
 
@@ -32,29 +74,33 @@ a{
     color:aqua;
 }
 
-body {
-    background-image: url('../img/startpagepic.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center bottom;
-    background-size: 400px 300px;
-}
 #Header{
     width:auto;
     height: 200px;
     padding: 5px 5px 5px 0;
     margin: 10px auto 0;
-    background-color:#4fb575;
+    background-color:#21b9ca;
     border-radius: 10px 10px 0 0;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
+#PictureSlide{
+
+}
+.carousel-caption {
+    z-index: 10 !important;
+}
+
+    .carousel-caption p {
+        font-size: 20px;
+        line-height: 1.4;
+    }
 
 #dropdown {
     float: left;
     text-align: center;
 }
 #dropdown li {
-     background-color:#4fb575;
+     background-color:#21b9ca;
      border:1px solid #666;
      list-style: none;
      margin-left:-42px;
@@ -94,21 +140,22 @@ body {
 #Footer{
     background-color: gray;
     width: auto;
-    height: 300px;
-    margin-top: 210px;
+    height: 200px;
+    border-radius:0 0 10px 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 
 }
 
 #FooterBox1{
     background-color: transparent;
     width: 300px;
-    height: 300px;
-    margin-left: 30%;
+    height: 200px;
+    margin-left: 20%;
     float: left;
 }
 
 #BoxTextHead1{
-    text-align: center;
+
     margin-top: 0px;
     color: #ffffff;
     font-size: 1.55em;
@@ -117,7 +164,7 @@ body {
 }
 
 #BoxText1{
-    text-align: center;
+
     margin-top: 0;
     color: #ffffff;
     font-size: 1em;
@@ -136,7 +183,7 @@ body {
 #FooterBox2{
     background-color: transparent;
     width: 300px;
-    height: 300px;
+    height: 200px;
     margin-left: 46%;
 }
 
@@ -160,8 +207,12 @@ body {
 
 /*----------------Footer------------------*/
 
-#Content{
-    background-color: transparent;
+#Content {
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+    background-position: center;
+    background-size: 500px 400px;
+    background-color:white;
     width: auto;
-    height: 400px;
+    height: 500px;
 }
