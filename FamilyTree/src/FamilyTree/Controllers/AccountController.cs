@@ -90,5 +90,11 @@ namespace FamilyTree.Controllers
             else
                 return Redirect(returnUrl);
         }
+
+        public IActionResult LogOff()
+        {
+            _signInManager.SignOutAsync();
+            return RedirectToAction(nameof(HomeController.Index), "Home");
+        }
     }
 }

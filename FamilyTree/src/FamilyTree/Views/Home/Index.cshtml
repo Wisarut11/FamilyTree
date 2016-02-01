@@ -1,25 +1,26 @@
-﻿@model LoginViewModel
+﻿
 
-<div id="Header">
-    <a href="index">
-        <div id="Logo_1"><h2>Family</h2></div>
-        <div id="Logo_2"><h2>Tree</h2></div>
-    </a>
-    <div id="Header_Intro"><h2>Välkommen till</h2></div>
-    <div id="Logotext_1"><h2>Family</h2></div>
-    <div id="Logotext_2"><h2>Tree</h2></div>
-
-    <form asp-action="Login" id="LoginIndex">
-        <label asp-for="UserName"></label><br />
-        <input asp-for="UserName" />
-        <span asp-validation-for="UserName"></span>
-        <br />
-        <label asp-for="Password"></label><br />
-        <input asp-for="Password" />
-        <span asp-validation-for="Password"></span>
+<div id="InformationContant">
+    <p>
+        Släktforskning
         <br /><br />
-        <input type="submit" value="Loggain" />
-    </form>
+        Sedan några år har släktforskningen flyttat ut mer och mer på nätet,<br />
+        och du hittar inte bara kyrkböckerna tillgängliga hemma från skrivbordsstolen,<br />
+        utan även inscannade tidningar, domböcker och folkräkningar bara ett par klick bort.<br />
+        Det är också lätt att släktforska gratis på nätet.
+
+
+
+        På den här sidan får du en introduktion i följande:<br />
+        <br />
+        •Hur börjar man släktforska?<br />
+        •Släktforska på nätet<br />
+        •gratis släktforskning på internet - några tips<br />
+        •Släktforskningsprogram<br />
+        <br />
+        Det du behöver är intresse, tid, en dator och ett släktforskningsprogram du gillar att jobba med<br />
+
+    </p>
 </div>
 <ul id="dropdown">
     <li>
@@ -27,8 +28,8 @@
             Konto
         </h4>
         <ul>
-            <li><a href="~/account/registration">Registrering</a></li>
-            <li><a href="~/account/login">Login</a></li>
+            <li><a href="~/account/registration">Registrera</a></li>
+            <li><a href="~/account/login">Logga In</a></li>
 
         </ul>
     </li>
@@ -43,9 +44,9 @@
         </ul>
     </li>
     <li>
-        <h4><a href="home/index">Om oss</a></h4>
+        <h4><a href="home/index">Start Sidan</a></h4>
     </li>
     <li>
-        <h4><a href="#">Start Sidan</a></h4>
+        <h4><a href="#">Om Oss</a></h4>
     </li>
 </ul>

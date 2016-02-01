@@ -1,18 +1,17 @@
-﻿body {
+﻿a{
+    text-decoration: none;
+}
+body {
     /*background-image: url('../img/startpagepic.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center bottom;
     background-size: 400px 300px;*/
-    background-color:black;
+    background-color:white;
 }
-#Header_Intro{
+.Header_Intro{
     text-align:center;
 }
-a{
-    text-decoration: none;
-}
-
 #RegistrationLink{
     height:50px;
     width:300px;
@@ -27,11 +26,13 @@ a{
 }
 #LoginTable{
     padding:30px;
+    
 }
 
 #LoginIndex{
-    width:300px;
+    width:180px;
     float:right;
+    margin-top:-35px;
 }
 
 #RegistrationForm{
@@ -40,6 +41,9 @@ a{
     background-color:#21b9ca;
     border-radius: 10px 10px 10px 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+#RegistrationHederLink{
+    margin-left:15px;
 }
 
 #LoginForm{
@@ -51,6 +55,14 @@ a{
 }
 .field-validation-error{
     color:red;
+    font-size:13px;
+}
+
+#Logoff{
+    margin-left:350px;
+    float:right;
+    margin-top:110px;
+
 }
 #Logo_1{
 
@@ -62,7 +74,7 @@ a{
     
 }
 #Logo_2{
-    margin-top: -5px;
+    margin-top: -8px;
     color:aqua;
 
 }
@@ -83,10 +95,13 @@ a{
 }
 
 #Header{
+    /*position:fixed;
+    left:0;
+    right:0;
+    z-index:150;*/
     width:auto;
     height: 200px;
     padding: 5px 5px 5px 0;
-    margin: 10px auto 0;
     background-color:#21b9ca;
     border-radius: 10px 10px 0 0;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
@@ -94,18 +109,23 @@ a{
 #PictureSlide{
 
 }
-.carousel-caption {
+/*.carousel-caption {
     z-index: 10 !important;
 }
 
     .carousel-caption p {
         font-size: 20px;
         line-height: 1.4;
-    }
+    }*/
 
 #dropdown {
+    /*margin-top:230px;
     text-align: center;
-    margin-top:150px;
+    margin-left:10px;
+    position:fixed;*/
+    left:0;
+    right:0;
+    z-index:150;
 }
 #dropdown li {
      background-color:#21b9ca;
@@ -142,6 +162,16 @@ a{
 #dropdown li:hover ul {
      display: block;
 }
+#InformationContant {
+    float: right;
+    width: 1000px;
+    height: 450px;
+    text-align:left;
+    background-image: url('../img/startpagepic.jpg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 400px 300px;
+}
 
 /*----------------Footer------------------*/
 
@@ -158,7 +188,7 @@ a{
     background-color: transparent;
     width: 300px;
     height: 200px;
-    margin-left: 20%;
+    margin-left: 30%;
     float: left;
 }
 
