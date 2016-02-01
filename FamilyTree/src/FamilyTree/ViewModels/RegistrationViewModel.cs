@@ -17,5 +17,9 @@ namespace FamilyTree.ViewModels
         [DataType(DataType.Password)]
         [Required(ErrorMessage = "Ange ett lösenord")]
         public string Password { get; set; }
+        [DataType(DataType.Password)]
+        [Display(Name = "Bekreft Lösenrod")]
+        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        public string ConfirmPassword { get; set; }
     }
 }
