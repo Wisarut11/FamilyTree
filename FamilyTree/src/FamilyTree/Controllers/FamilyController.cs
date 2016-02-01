@@ -42,6 +42,8 @@ namespace FamilyTree.Controllers
                     Relation = viewModel.Relation,
                     Name = viewModel.Name
                 };
+                _db.FamilyMembers.Add(fm);
+                _db.SaveChanges();
                 return RedirectToAction("Index");
             }
             //something went wrong go back to Add action
