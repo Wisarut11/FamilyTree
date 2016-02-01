@@ -8,7 +8,7 @@ using FamilyTree.Models;
 namespace FamilyTree.Migrations
 {
     [DbContext(typeof(ftContext))]
-    [Migration("20160201095053_Initial")]
+    [Migration("20160201103647_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -48,8 +48,6 @@ namespace FamilyTree.Migrations
                     b.Property<string>("Id");
 
                     b.Property<int>("AccessFailedCount");
-
-                    b.Property<int>("Age");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
