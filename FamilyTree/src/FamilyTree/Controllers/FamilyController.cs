@@ -6,6 +6,7 @@ using Microsoft.AspNet.Mvc;
 using FamilyTree.Models;
 using System.Security.Claims;
 using Microsoft.AspNet.Authorization;
+using FamilyTree.ViewModels;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -25,9 +26,25 @@ namespace FamilyTree.Controllers
 
             return View(_db.FamilyMembers.Where(q => q.UserId == User.GetUserId()).ToList());
         }
-
+        [HttpGet]
         public IActionResult Add()
         {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Add(CreateFamilyMemberViewModel viewModel)
+        {
+            if(ModelState.IsValid)
+            {
+                FamilyMember fm = new FamilyMember
+                {
+                    UserId = User.GetUserId(),
+                    Relation = viewModel.Relation,
+                    Name = viewModel.Name
+                };
+                return RedirectToAction("Index");
+            }
+            //something went wrong go back to Add action
             return View();
         }
         public IActionResult Remove()
