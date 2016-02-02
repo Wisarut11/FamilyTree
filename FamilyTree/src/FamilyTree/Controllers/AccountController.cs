@@ -91,11 +91,6 @@ namespace FamilyTree.Controllers
             else
               return Redirect(returnUrl);
         }
-        public IActionResult LoginPartial()
-        {
-            return PartialView();
-        }
-
         public IActionResult LogOff()
         {
             _signInManager.SignOutAsync();
