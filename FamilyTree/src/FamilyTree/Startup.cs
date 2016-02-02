@@ -19,7 +19,7 @@ namespace FamilyTree
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            var connString = "Data Source=185.7.62.242\\SQLEXPRESS; Integrated Security = False; User ID = Grupp4; Password = Safari;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True;";
+            var connString = "Data Source=185.7.62.242\\SQLEXPRESS;Database=FamilyTree; Integrated Security = False; User ID = Grupp4; Password = Safari;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;MultipleActiveResultSets=True;";
                 
                 services.AddEntityFramework()
                 .AddSqlServer()
