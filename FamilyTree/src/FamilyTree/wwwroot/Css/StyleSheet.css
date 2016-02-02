@@ -2,14 +2,9 @@
     text-decoration: none;
 }
 body {
-    /*background-image: url('../img/startpagepic.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center bottom;
-    background-size: 400px 300px;*/
-    background-color:white;
+    background-color:lightcyan;
 }
-.Header_Intro{
+#Header_Intro{
     text-align:center;
 }
 #RegistrationLink{
@@ -32,7 +27,7 @@ body {
 #LoginIndex{
     width:180px;
     float:right;
-    margin-top:-35px;
+    margin-top:-95px;
 }
 
 #RegistrationForm{
@@ -61,74 +56,56 @@ body {
 #Logoff{
     margin-left:350px;
     float:right;
-    margin-top:110px;
+    margin-top:50px;
 
 }
 #Logo_1{
-
-    margin-left:15px;
-    margin-top:-10px;
     float:left;
-    color:blueviolet;
-    font-family: cursive
-    
+    color:saddlebrown;
+    font-family: cursive;
+    margin-left:460px;
+    font-size:30px;
 }
 #Logo_2{
-    margin-top: -8px;
-    color:aqua;
-
+    color:mediumseagreen;
+    font-size:30px;
+    margin-top: 48px;
 }
 #Logotext_1{
-
-    margin-left:670px;
-    margin-top:-45px;
+    margin-top:-68px;
+    margin-left:-115px;
     float:left;
-    color:blueviolet;
+    color:saddlebrown;
     font-family: cursive
     
 }
 #Logotext_2{
-    margin-top: -40px;
-    color:aqua;
+    margin-top: -65px;
+    color:mediumseagreen;
     float:left;
+    margin-left:5px;
 
 }
 
-#Header{
-    /*position:fixed;
-    left:0;
-    right:0;
-    z-index:150;*/
-    width:auto;
+#Header {
+    background-repeat: no-repeat;
+    background-image: url('../img/image.gif');
+    width: auto;
     height: 200px;
     padding: 5px 5px 5px 0;
-    background-color:#21b9ca;
+    background-color:snow;
     border-radius: 10px 10px 0 0;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
-#PictureSlide{
-
-}
-/*.carousel-caption {
-    z-index: 10 !important;
-}
-
-    .carousel-caption p {
-        font-size: 20px;
-        line-height: 1.4;
-    }*/
 
 #dropdown {
-    /*margin-top:230px;
-    text-align: center;
-    margin-left:10px;
-    position:fixed;*/
     left:0;
     right:0;
     z-index:150;
+    margin-top: 7px;
 }
 #dropdown li {
-     background-color:#21b9ca;
+     background-color:snow;
      border:1px solid #666;
      list-style: none;
      margin-left:-42px;
@@ -139,7 +116,7 @@ body {
      border-radius: 10px 10px 10px 10px;
 }
 #dropdown li:hover {
-    background-color:greenyellow;
+    background-color:lightgray;
 }
 #dropdown li a {
     text-decoration:none;
