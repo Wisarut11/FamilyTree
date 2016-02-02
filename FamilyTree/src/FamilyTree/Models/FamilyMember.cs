@@ -9,7 +9,7 @@ namespace FamilyTree.Models
     {
         public FamilyMember()
         {
-            
+            Images = new List<Image>();
         }
         public int Id { get; set; }
         public string UserId { get; set; }

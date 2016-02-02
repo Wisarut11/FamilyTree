@@ -36,7 +36,7 @@ namespace FamilyTree.Controllers
             
             return View();
         }
-        //[Route("Skapa")]
+        [Route("Skapa")]
         [AllowAnonymous]
         public IActionResult Registration()
         {
@@ -77,8 +77,6 @@ namespace FamilyTree.Controllers
         {
             return View();
         }
-
-
         [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel viewModel, string returnUrl)
@@ -88,7 +86,7 @@ namespace FamilyTree.Controllers
                 false, false);
 
             if (string.IsNullOrWhiteSpace(returnUrl))
-                return RedirectToAction("index");
+                return RedirectToAction("Index","Family",null);
             else
               return Redirect(returnUrl);
         }

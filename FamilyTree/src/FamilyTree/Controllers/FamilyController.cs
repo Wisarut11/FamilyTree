@@ -43,7 +43,7 @@ namespace FamilyTree.Controllers
                 };
                 _db.FamilyMembers.Add(fm);
                 _db.SaveChanges();
-                return RedirectToAction("Index","Account");
+                return RedirectToAction("Index");
             }
             //something went wrong go back to Add action
             return View();
