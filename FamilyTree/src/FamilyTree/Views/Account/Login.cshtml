@@ -1,18 +1,17 @@
 ﻿@model LoginViewModel
 
-<h1>Welcome to Login</h1>
+<p>Välkommen till Logg In sidan!</p>
 
-<form asp-action="Login">
-    <label asp-for="UserName"></label>
-    <br />
-    <input asp-for="UserName" />
-    <span asp-validation-for="UserName"></span>
-    <br />
-    <label asp-for="Password"></label>
-    <br />
-    <input asp-for="Password" />
-    <span asp-validation-for="Password"></span>
-    <br />
-    <input type="submit" value="Loggain" />
-
-</form>
+    <form asp-action="Login">
+        <label asp-for="UserName"></label>
+        <br />
+        <input asp-for="UserName" />
+        <span asp-validation-for="UserName"></span>
+        <br />
+        <label asp-for="Password"></label>
+        <br />
+        <input asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+        <br />
+        <input type="submit" value="Loggain" />
+    </form>

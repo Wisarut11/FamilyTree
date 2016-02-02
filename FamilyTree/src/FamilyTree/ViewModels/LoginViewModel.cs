@@ -9,12 +9,12 @@ namespace FamilyTree.ViewModels
     public class LoginViewModel
     {
         [Display(Name = "Användarnamn")]
-        [Required(ErrorMessage = "Ange ett validerad Användarnamn")]
+        [Required(ErrorMessage = "Ange ett validerat användarnamn!")]
         public string UserName { get; set; }
 
         [Display(Name = "Lösenord")]
         [DataType(DataType.Password)]
-        [Required(ErrorMessage = "Ange ett validerad Lösenord")]
+        [Required(ErrorMessage = "Ange ett validerat Lösenord!")]
         public string Password { get; set; }
     }
 }

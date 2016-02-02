@@ -7,6 +7,7 @@ using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using FamilyTree.ViewModels;
+using FamilyTree.Models;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -16,13 +17,13 @@ namespace FamilyTree.Controllers
     //[Route("Konto")]
     public class AccountController : Controller
     {
-            UserManager<IdentityUser> _userManager;
-            SignInManager<IdentityUser> _signInManager;
-            IdentityDbContext _identityContext;
+            UserManager<User> _userManager;
+            SignInManager<User> _signInManager;
+            ftContext _identityContext;
 
-            public AccountController(UserManager<IdentityUser> userManager,
-                SignInManager<IdentityUser> signInManager,
-                IdentityDbContext identityContext)
+            public AccountController(UserManager<User> userManager,
+                SignInManager<User> signInManager,
+                ftContext identityContext)
             {
                 _userManager = userManager;
                 _signInManager = signInManager;
@@ -54,8 +55,8 @@ namespace FamilyTree.Controllers
 
             await _identityContext.Database.EnsureCreatedAsync();
 
-            var result = await _userManager.CreateAsync(new IdentityUser(
-                viewModel.UserName), viewModel.Password);
+            var user = new User { UserName = viewModel.UserName};
+            var result = await _userManager.CreateAsync(user, viewModel.Password);
 
             if (!result.Succeeded)
             {
@@ -88,6 +89,12 @@ namespace FamilyTree.Controllers
                 return RedirectToAction("index");
             else
                 return Redirect(returnUrl);
+        }
+
+        public IActionResult LogOff()
+        {
+            _signInManager.SignOutAsync();
+            return RedirectToAction(nameof(HomeController.Index), "Home");
         }
     }
 }
