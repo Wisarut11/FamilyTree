@@ -1,3 +1,10 @@
 ﻿@model CreateFamilyMemberViewModel
 <h1>add user</h1>
-
+<form asp-action="Add" asp-controller="Family">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span>
+    <label asp-for="Relation"></label>
+    <input asp-for="Relation" />
+    <span asp-validation-for="Relation"></span>
+</form>
