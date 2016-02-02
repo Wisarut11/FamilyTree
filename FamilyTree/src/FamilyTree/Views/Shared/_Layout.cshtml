@@ -1,6 +1,4 @@
-﻿@model LoginViewModel
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
 <head>
@@ -19,18 +17,7 @@
 
         @if (!User.Identity.IsAuthenticated)
         {
-            <form asp-action="Login" asp-controller="Account" id="LoginIndex">
-                <label asp-for="UserName"></label><br />
-                <input asp-for="UserName" /><br />
-                <span asp-validation-for="UserName"></span>
-                <br />
-                <label asp-for="Password"></label><br />
-                <input asp-for="Password" /><br />
-                <span asp-validation-for="Password"></span>
-                <br /><br />
-                <input type="submit" value="Logga In" />
-                <a href="~/account/registration" id="RegistrationHederLink">Registrera!</a>
-            </form>
+            @Html.Partial("LoginPartial")
         }
         else
         {

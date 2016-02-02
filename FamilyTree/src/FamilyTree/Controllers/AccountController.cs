@@ -33,6 +33,7 @@ namespace FamilyTree.Controllers
 
             public IActionResult Index()
         {
+            
             return View();
         }
         //[Route("Skapa")]
@@ -88,7 +89,11 @@ namespace FamilyTree.Controllers
             if (string.IsNullOrWhiteSpace(returnUrl))
                 return RedirectToAction("index");
             else
-                return Redirect(returnUrl);
+              return Redirect(returnUrl);
+        }
+        public IActionResult LoginPartial()
+        {
+            return PartialView();
         }
 
         public IActionResult LogOff()

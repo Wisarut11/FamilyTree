@@ -12,7 +12,6 @@ using FamilyTree.ViewModels;
 
 namespace FamilyTree.Controllers
 {
-    [Authorize]
     public class FamilyController : Controller
     {
         private ftContext _db;
@@ -23,8 +22,8 @@ namespace FamilyTree.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-
-            return View(_db.FamilyMembers.Where(q => q.UserId == User.GetUserId()).ToList());
+            List<FamilyMember> fm = _db.FamilyMembers.Where(q => q.UserId == User.GetUserId()).ToList();
+            return View(fm);
         }
         [HttpGet]
         public IActionResult Add()
@@ -44,7 +43,7 @@ namespace FamilyTree.Controllers
                 };
                 _db.FamilyMembers.Add(fm);
                 _db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Account");
             }
             //something went wrong go back to Add action
             return View();
