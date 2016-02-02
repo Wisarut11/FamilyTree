@@ -3,7 +3,7 @@
 <a asp-action="Add">Lägg til Familjmedlem</a>
 @if(Model.Count != 0)
 {
-    <table>
+    <table class="family">
         <tr>
             <th>
                 Name
@@ -18,8 +18,7 @@
                 Show Images
             </th>
         </tr>
-    </table>
-    foreach(var f in Model)
+    @foreach(var f in Model)
     {
         <tr>
             <td>
@@ -32,11 +31,11 @@
                 <a asp-action="Add" asp-controller="Image" asp-route-fmId="@f.Id">Add Image</a>
             </td>
             <td>
-                <a href="#" id="imageshow">Toggle Images</a>
+                <a href="#" id="imageshow-@f.Id" >Toggle Images</a>
                 <br />
-                <div id="showimages-@f.Id"></div>
+                <div id="showimages-@f.Id" style="display:none"></div>
                 <script type="text/javascript">
-                $('#imageshow').click(function()
+                $('#imageshow-'+@f.Id).click(function()
                 {
                     $.get("/Image/ViewImages/",
                         { fmId : @f.Id },
@@ -50,6 +49,7 @@
 
 
     }
+        </table>
 }
 else
 {

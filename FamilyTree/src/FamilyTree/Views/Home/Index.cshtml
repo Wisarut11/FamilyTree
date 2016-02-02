@@ -28,29 +28,25 @@
     <ul id="dropdown">
         <li>
             <h4>
-                Konto
+                <a asp-action="Registration" asp-controller="Account">Registrera</a>
             </h4>
             <ul>
-                <li><a href="~/account/registration">Registrera</a></li>
                 <li><a href="~/account/login">Logga In</a></li>
+            </ul>
+        </li>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <li>
+                <h4>
+                    <a asp-action="Index" asp-controller="Family">Din Familj</a>
+                </h4>
 
-            </ul>
-        </li>
-        <li>
-            <h4>
-                Information
-            </h4>
-            <ul>
-                <li><a href="#">Länk 2 - 1</a></li>
-                <li><a href="#">Länk 2 - 2</a></li>
-                <li><a href="#">Länk 2 - 3</a></li>
-            </ul>
-        </li>
+            </li>
+
+        }
+
         <li>
             <h4><a href="home/index">Start Sidan</a></h4>
-        </li>
-        <li>
-            <h4><a href="#">Om Oss</a></h4>
         </li>
     </ul>
 </div>

@@ -1,6 +1,15 @@
 ﻿a{
     text-decoration: none;
 }
+table.family{
+    width:80%;
+    margin:0 auto;
+}
+table.family th, table.family td 
+{
+    text-align:left;
+    width:20%;
+}
 body {
     background-color:rgba(0, 0, 0, 0.5);
 }

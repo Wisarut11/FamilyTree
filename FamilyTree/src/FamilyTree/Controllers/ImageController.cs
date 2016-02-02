@@ -50,7 +50,7 @@ namespace FamilyTree.Controllers
                     _context.SaveChanges(); 
                 }
             }
-            return RedirectToAction("Index", "Account", null);
+            return RedirectToAction("Index", "Family", null);
         }
         public IActionResult ViewImages(int fmId)
         {
