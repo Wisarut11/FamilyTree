@@ -92,7 +92,6 @@ body {
     margin-top: -65px;
     color:mediumseagreen;
     float:left;
-    margin-left:5px;
 
 }
 
@@ -179,7 +178,7 @@ body {
 
 #FooterBox1{
     background-color: transparent;
-    width: 550px;
+    width: 625px;
     height: 200px;
     float: left;
     text-align: center;
@@ -192,7 +191,6 @@ body {
 }
 
 #BoxText1{
-
     margin-top: 0;
     color: #ffffff;
     font-size: 1em;

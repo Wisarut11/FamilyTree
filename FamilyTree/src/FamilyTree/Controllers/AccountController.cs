@@ -65,6 +65,7 @@ namespace FamilyTree.Controllers
                 return View(viewModel);
             }
 
+
             if (string.IsNullOrWhiteSpace(returnUrl))
                 return RedirectToAction("index");
             else
