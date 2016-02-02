@@ -1,5 +1,6 @@
 ﻿@model List<FamilyTree.Models.FamilyMember>
-
+<script src="~/Script/jquery.js"></script>
+<a asp-action="Add">Lägg til Familjmedlem</a>
 @if(Model.Count != 0)
 {
     <table>
@@ -9,6 +10,12 @@
             </th>
             <th>
                 Relation
+            </th>
+            <th>
+                Add Image
+            </th>
+            <th>
+                Show Images
             </th>
         </tr>
     </table>
@@ -21,7 +28,26 @@
             <td>
                 @f.Relation
             </td>
+            <td>
+                <a asp-action="Add" asp-controller="Image" asp-route-fmId="@f.Id">Add Image</a>
+            </td>
+            <td>
+                <a href="#" id="imageshow">Toggle Images</a>
+                <br />
+                <div id="showimages-@f.Id"></div>
+                <script type="text/javascript">
+                $('#imageshow').click(function()
+                {
+                    $.get("/Image/ViewImages/",
+                        { fmId : @f.Id },
+                        function(html){
+                        $("#showimages-"+@f.Id).toggle().html(html);
+                    });
+                });
+                </script>
+            </td>
         </tr>
+
 
     }
 }

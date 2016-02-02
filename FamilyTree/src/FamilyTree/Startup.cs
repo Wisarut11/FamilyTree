@@ -57,6 +57,17 @@ namespace FamilyTree
 
                 app.UseStaticFiles();
                 app.UseIdentity();
+                /*app.UseMvc(routes =>
+                {
+                    /*routes.MapRoute(
+                        name: "reg",
+                        template: "Konto/Skapa",
+                        defaults: new { controller = "Account", Action = "Registration" }
+                        );
+                    routes.MapRoute(
+                        name: "default",
+                        template: "{controller=Home}/{action=Index}/{id}");
+                });*/
                 app.UseMvcWithDefaultRoute();
 
             }

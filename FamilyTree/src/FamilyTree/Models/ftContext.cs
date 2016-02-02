@@ -10,5 +10,6 @@ namespace FamilyTree.Models
     public class ftContext : IdentityDbContext<User>
     {
         public DbSet<FamilyMember> FamilyMembers { get; set; }
+        public DbSet<Image> Images { get; set; }
     }
 }
